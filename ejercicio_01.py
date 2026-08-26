@@ -20,8 +20,8 @@ else:
     print("No se aplico descuento")
 
 total = subtotal - descuento
-
+impuestos = total * 0.15
 print(f"subtotal es : $ {subtotal}")
 print(f"descuento es : $ {descuento}")
 print(f"total a pagar es : $ {total}")
-
+print(f"pago de impuestos : $ {impuestos}")
