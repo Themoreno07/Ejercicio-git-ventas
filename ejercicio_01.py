@@ -14,8 +14,10 @@ def calcular_descuento(subtotal):
 
 if subtotal >=100:
     descuento = calcular_descuento(subtotal)
+    print("se aplico un descuento del 10%")
 else:
     descuento = 0
+    print("No se aplico descuento")
 
 total = subtotal - descuento
 
