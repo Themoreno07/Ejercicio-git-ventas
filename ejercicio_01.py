@@ -10,7 +10,7 @@ def calcular_subtotal(cantidad):
 subtotal = calcular_subtotal(cantidad)
 
 def calcular_descuento(subtotal):
-    return subtotal * 0.5
+    return subtotal * 0.25
 
 if subtotal >=100:
     descuento = calcular_descuento(subtotal)
