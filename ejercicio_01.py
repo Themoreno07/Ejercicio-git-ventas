@@ -2,26 +2,36 @@
 #y que el programa devuelva un subtotal aplique descuento si amerita y marque el total
 
 Precio = 50
-cantidad = int(input("cuantos quiere? "))
 
 def calcular_subtotal(cantidad):
     return cantidad * 50
 
-subtotal = calcular_subtotal(cantidad)
-
 def calcular_descuento(subtotal):
-    return subtotal * 0.25
+    return subtotal_acomulado * 0.25
 
-if subtotal >=100:
-    descuento = calcular_descuento(subtotal)
-    print("se aplico un descuento del 10%")
+subtotal_acomulado = 0
+
+while True:
+    cantidad = int(input("cuantos quiere? "))
+
+    subtotal_acomulado += calcular_subtotal(cantidad)
+
+    respuesta = input("Desea agregar mas productos.? s/n ") 
+    if respuesta == 'n':
+        break
+
+if subtotal_acomulado >=100:
+    descuento = calcular_descuento(cantidad)
+    print("se aplico un descuento del 25%")
 else:
     descuento = 0
     print("No se aplico descuento")
 
-total = subtotal - descuento
+total = subtotal_acomulado - descuento
 impuestos = total * 0.15
-print(f"subtotal es : $ {subtotal}")
+
+print(f"subtotal es : $ {subtotal_acomulado}")
 print(f"descuento es : $ {descuento}")
 print(f"total a pagar es : $ {total}")
 print(f"pago de impuestos : $ {impuestos}")
+
